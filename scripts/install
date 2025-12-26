@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# This is where we load the official YunoHost helpers
+source /usr/share/yunohost/helpers
+
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+# This is where we would usually fetch the .tar.gz archive 
+# from the upstream and extract it into our local install dir
+#=================================================
+# At the beginning of each major operation, we call this helper
+# that creates a progress bar
+ynh_script_progression --message="Setting up source files..." 
+ynh_setup_source --dest_dir="$install_dir"
+
+ynh_script_progression --message="Starting server for the first time to accept the eula and setup the server configuration..."
+ynh_spawn_app_shell <<<"java -Xmx${memory}M -Xms${memory}M -jar ${install_dir}/server.jar nogui"
+echo "eula=${eula}" >${install_dir}/eula.txt
+ynh_config_add --jinja 
+
+ynh_script_progression --message="Adding systemd service..."
+ynh_config_add_systemd
+
+ynh_script_progression --message="Starting systemd service..."
+ynh_systemctl
+
+#=================================================
+# NGINX CONFIGURATION
+# This is where the nginx conf snippet for the app is created using the
+# configuration template provided in conf/nginx.conf
+# and added to /etc/nginx/conf.d/$domain.d/$app.conf
+#=================================================
+ynh_script_progression --message="Configuring nginx web server..." --weight=1
+
+ynh_add_nginx_config

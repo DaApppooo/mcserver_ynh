@@ -1,0 +1,345 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "mcserver"
+name = "Vanilla Minecraft Server"
+description.en = "Packaging of the official java minecraft server. Need a client to connect to the server."
+description.fr = "Packaging du serveur minecraft java officiel. Nécessite un client pour se connecter au serveur."
+
+version = "1.21.11~ynh6"
+
+maintainers = [ "appo.tcp@gmail.com" ]
+
+[upstream]
+license = "MIT"
+website = "https://www.minecraft.net/en-us"
+
+[integration]
+yunohost = ">= 11.2.18"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = "not_relevant"
+sso = "not_relevant"
+
+disk = "5000M"
+ram.build = "2000M"
+ram.runtime = "2000M"
+
+[antifeatures]
+not-totally-free-upstream.en = "Relies on software that is not free and open source in order to run (the minecraft server)."
+paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
+
+[install]
+    [install.path]
+    type = "path"
+    default = "/mcserver"
+
+    [install.init_main_permission]
+    # this is a generic question - ask strings are automatically handled by YunoHost's core
+    type = "group"
+    default = "admin"
+
+    [install.eula]
+    ask.en = "Do you agree to mojang's eula, found here: https://aka.ms/MinecraftEULA"
+    type = "boolean"
+    default = false
+
+    [install.memory]
+    ask.en = "How much ram (in megabytes) do you want to allocate (at most) for this server:"
+    type = "number"
+    default = 1024
+
+    [install.accepts-transfers]
+    ask.en="Does your server accepts transfers ?"
+    type='boolean'
+    default=false
+
+    [install.allow-flight]
+    ask.en="Does your server allows flight ?"
+    type='boolean'
+    default=false
+
+
+    [install.broadcast-console-to-ops]
+    ask.en="Broadcast console to ops ?"
+    type='boolean'
+    default=true
+    [install.broadcast-rcon-to-ops]
+    ask.en="Broadcast rcon to ops ?"
+    type='boolean'
+    default=true
+    [install.bug-report-link]
+    ask.en="Link to report bugs to (empty to ignore):"
+    type="string"
+    default=''
+    [install.difficulty]
+    ask.en="Difficulty"
+    type="select"
+    choices = [ "peaceful", "easy", "normal", "hard" ]
+    default = "easy"
+    [install.enable-code-of-conduct]
+    ask.en="Enable code of conduct ?"
+    type='boolean'
+    default=false
+    [install.enable-jmx-monitoring]
+    ask.en="Enable jmx monitoring ?"
+    type='boolean'
+    default=false
+    [install.enable-query]
+    ask.en="Enable query ?"
+    type='boolean'
+    default=false
+    [install.enable-rcon]
+    ask.en="Enable rcon ? (web interface won't work if not enabled)"
+    type='boolean'
+    default=true
+    [install.enable-status]
+    ask.en="Enable status ?"
+    type='boolean'
+    default=true
+    [install.enforce-secure-profile]
+    ask.en="Enforce secure profile:"
+    type='boolean'
+    default=true
+    [install.enforce-whitelist]
+    ask.en="Whitelist only ?"
+    type='boolean'
+    default=false
+    [install.entity-broadcast-range-percentage]
+    ask.en="Entity broadcast range percentage:"
+    type='range'
+    default='100'
+    min = "0"
+    max = "100"
+    [install.force-gamemode]
+    ask.en="Force gamemode ?"
+    type='boolean'
+    default=false
+    [install.function-permission-level]
+    ask.en="Function permission level:"
+    type='number'
+    default='2'
+    [install.gamemode]
+    ask.en="Gamemode:"
+    type="select"
+    choices = [ "creative", "survival", "spectator" ]
+    default='survival'
+    [install.generate-structures]
+    ask.en="Generate structures ?"
+    type='boolean'
+    default=true
+    [install.generator-settings]
+    ask.en="Generator settings:"
+    type="string"
+    default='{}'
+    [install.hardcore]
+    ask.en="Activate hardcore"
+    type='boolean'
+    default=false
+    [install.hide-online-players]
+    ask.en="Hide online players ?"
+    type='boolean'
+    default=false
+    [install.initial-disabled-packs]
+    ask.en="Initial disabled packs:"
+    type="string"
+    default=''
+    [install.initial-enabled-packs]
+    ask.en="Initial enabled packs:"
+    type="string"
+    default='vanilla'
+    [install.level-name]
+    ask.en="Name:"
+    type="string"
+    default='world'
+    [install.level-seed]
+    ask.en="Seed:"
+    type="string"
+    default=''
+    [install.level-type]
+    ask.en="Type:"
+    type="string"
+    default='minecraft\\:normal'
+    [install.log-ips]
+    ask.en="Log ips ?"
+    type='boolean'
+    default=true
+    [install.management-server-allowed-origins]
+    ask.en="management-server-allowed-origins"
+    type="string"
+    default=''
+    [install.management-server-enabled]
+    ask.en="management-server-enabled"
+    type='boolean'
+    default=false
+    [install.management-server-host]
+    ask.en="management-server-host"
+    type="string"
+    default='localhost'
+    [install.management-server-port]
+    ask.en="management-server-port"
+    type=number
+    default='0'
+    [install.management-server-tls-enabled]
+    ask.en="management-server-tls-enabled"
+    type='boolean'
+    default=true
+    [install.management-server-tls-keystore]
+    ask.en="management-server-tls-keystore"
+    type="string"
+    default=''
+    [install.management-server-tls-keystore-password]
+    ask.en="management-server-tls-keystore-password"
+    type="string"
+    default=''
+    [install.max-chained-neighbor-updates]
+    ask.en="Maximum number of chained neighbor updates:"
+    type="number"
+    default='1000000'
+    [install.max-players]
+    ask.en="Maximum number of players:"
+    type="number"
+    default='20'
+    [install.max-tick-time]
+    ask.en="Maximum tick time:"
+    type="number"
+    default='60000'
+    [install.max-world-size]
+    ask.en="Maximum world size:"
+    type=number
+    default='29999984'
+    [install.motd]
+    ask.en="Server title:"
+    type="string"
+    default='A Minecraft Server'
+    [install.network-compression-threshold]
+    ask.en="Network compression threshold"
+    type="number"
+    default=256
+    [install.online-mode]
+    ask.en="online-mode"
+    type='boolean'
+    default=true
+    [install.op-permission-level]
+    ask.en="Permission level for operators:"
+    type="number"
+    default='4'
+    [install.pause-when-empty-seconds]
+    ask.en="Pause when empty after x seconds:"
+    type="number"
+    default=60
+    [install.player-idle-timeout]
+    ask.en="Kick idle players after x seconds (0 for never):"
+    type="number"
+    default=0
+    [install.prevent-proxy-connections]
+    ask.en="Prevent proxy connections"
+    type='boolean'
+    default=false
+    [install.query-port]
+    ask.en="Query port (if query is enabled):"
+    type="number"
+    default=25565
+    [install.rate-limit]
+    ask.en="Rate limit (0 for no limit):"
+    type="number"
+    default=0
+    [install.rcon-password]
+    ask.en="Rcon password (if rcon is enabled):"
+    type="string"
+    default=''
+    [install.rcon-port]
+    ask.en="Rcon port (if rcon is enabled, and DO NOT EXPOSE THIS PORT):"
+    type="number"
+    default=25575
+    [install.region-file-compression]
+    ask.en="Region file compressions:"
+    type="string"
+    default='deflate'
+    [install.require-resource-pack]
+    ask.en="Require ressource pack:"
+    type='boolean'
+    default=false
+    [install.resource-pack]
+    ask.en="Ressource pack:"
+    type="string"
+    default=''
+    [install.resource-pack-id]
+    ask.en="Ressource pack id:"
+    type="string"
+    default=''
+    [install.resource-pack-prompt]
+    ask.en="ressource-pack-prompt"
+    type="string"
+    default=''
+    [install.resource-pack-sha1]
+    ask.en="Sha1 hash of the ressource pack:"
+    type="string"
+    default=''
+    [install.server-ip]
+    ask.en="Server ip:"
+    type="string"
+    default='0.0.0.0'
+    [install.server-port]
+    ask.en="Server port (you need to open the ports on this server yourself):"
+    type="number"
+    default=25565
+    [install.simulation-distance]
+    ask.en="Simulation distance:"
+    type="number"
+    default=10
+    [install.spawn-protection]
+    ask.en="Spawn protection radius:"
+    type="number"
+    default=16
+    [install.status-heartbeat-interval]
+    ask.en="status-heartbeat-interval"
+    type="number"
+    default=0
+    [install.sync-chunk-writes]
+    ask.en="Synchronize chunk writes:"
+    type='boolean'
+    default=true
+    [install.text-filtering-config]
+    ask.en="Text filtering configuration:"
+    type="string"
+    default=''
+    [install.text-filtering-version]
+    ask.en="Text filtering version:"
+    type="number"
+    default=0
+    [install.use-native-transport]
+    ask.en="use-native-transport"
+    type='boolean'
+    default=true
+    [install.view-distance]
+    ask.en="View distance:"
+    type="number"
+    default=10
+    [install.white-list]
+    ask.en="Use a whitelist ?"
+    type='boolean'
+    default=false
+
+[resources]
+    [resources.sources]
+    [resources.sources.main]
+    url = "https://piston-data.mojang.com/v1/objects/64bb6d763bed0a9f1d632ec347938594144943ed/server.jar"
+    sha256 = "f83b8e093865806f931c7e34aae41b177d4c076335263dd124c75d6d65dd1726"
+    autoupdate.strategy = "latest_github_releas"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+    subdirs = [".mcserver/worlds"]
+
+    [resources.permissions]
+    main.allowed = "admin"
+
+    [resources.apt]
+    packages = ["default-jre"]
