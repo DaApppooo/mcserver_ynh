@@ -181,8 +181,8 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     default='localhost'
     [install.management_server_port]
     ask.en="management-server-port"
-    type=number
-    default='0'
+    type="number"
+    default=0
     [install.management_server_tls_enabled]
     ask.en="management-server-tls-enabled"
     type='boolean'
@@ -198,19 +198,19 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.max_chained_neighbor_updates]
     ask.en="Maximum number of chained neighbor updates:"
     type="number"
-    default='1000000'
+    default=1000000
     [install.max_players]
     ask.en="Maximum number of players:"
     type="number"
-    default='20'
+    default=20
     [install.max_tick_time]
     ask.en="Maximum tick time:"
     type="number"
-    default='60000'
+    default=60000
     [install.max_world_size]
     ask.en="Maximum world size:"
-    type=number
-    default='29999984'
+    type="number"
+    default=29999984
     [install.motd]
     ask.en="Server title:"
     type="string"
@@ -226,7 +226,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.op_permission_level]
     ask.en="Permission level for operators:"
     type="number"
-    default='4'
+    default=4
     [install.pause_when_empty_seconds]
     ask.en="Pause when empty after x seconds:"
     type="number"
