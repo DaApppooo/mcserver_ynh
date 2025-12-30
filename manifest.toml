@@ -40,7 +40,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.init_main_permission]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "group"
-    default = "admin"
+    default = "admins"
 
     [install.eula]
     ask.en = "Do you agree to mojang's eula, found here: https://aka.ms/MinecraftEULA"
