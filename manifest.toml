@@ -124,6 +124,8 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.function_permission_level]
     ask.en="Function permission level:"
     type='number'
+    min=0
+    max=1000
     default=2
     [install.gamemode]
     ask.en="Gamemode:"
@@ -189,6 +191,8 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="management-server-port"
     type="number"
     default=0
+    min=0
+    max=65535
     [install.management_server_tls_enabled]
     ask.en="management-server-tls-enabled"
     type='boolean'
@@ -207,18 +211,26 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="Maximum number of chained neighbor updates:"
     type="number"
     default=1000000
+    min=0
+    max=100000000000000
     [install.max_players]
     ask.en="Maximum number of players:"
     type="number"
     default=20
+    min=1
+    max=999999999999
     [install.max_tick_time]
     ask.en="Maximum tick time:"
     type="number"
     default=60000
+    min=1
+    max=99999999999999
     [install.max_world_size]
     ask.en="Maximum world size:"
     type="number"
     default=29999984
+    min=0
+    max=999999999999
     [install.motd]
     ask.en="Server title:"
     type="string"
@@ -227,6 +239,8 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="Network compression threshold"
     type="number"
     default=256
+    min=0
+    max=9999999999999
     [install.online_mode]
     ask.en="online-mode"
     type='boolean'
@@ -235,14 +249,20 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="Permission level for operators:"
     type="number"
     default=4
+    min=0
+    max=99999999
     [install.pause_when_empty_seconds]
     ask.en="Pause when empty after x seconds:"
     type="number"
     default=60
+    min=0
+    max=99999999999999
     [install.player_idle_timeout]
     ask.en="Kick idle players after x seconds (0 for never):"
     type="number"
     default=0
+    min=0
+    max=9999999999999999999
     [install.prevent_proxy_connections]
     ask.en="Prevent proxy connections"
     type='boolean'
@@ -251,9 +271,13 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="Query port (if query is enabled):"
     type="number"
     default=25565
+    min=0
+    max=65535
     [install.rate_limit]
     ask.en="Rate limit (0 for no limit):"
     type="number"
+    min=0
+    max=999999999999999999999999
     default=0
     [install.rcon_password]
     ask.en="Rcon password (if rcon is enabled):"
@@ -263,6 +287,8 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.rcon_port]
     ask.en="Rcon port (if rcon is enabled, and DO NOT EXPOSE THIS PORT):"
     type="number"
+    min=0
+    max=65535
     default=25575
     [install.region_file_compression]
     ask.en="Region file compressions:"
@@ -299,18 +325,26 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.server_port]
     ask.en="Server port (you need to open the ports on this server yourself):"
     type="number"
+    min=0
+    max=65535
     default=25565
     [install.simulation_distance]
     ask.en="Simulation distance:"
     type="number"
+    min=0
+    max=999999999999
     default=10
     [install.spawn_protection]
     ask.en="Spawn protection radius:"
     type="number"
+    min=0
+    max=99999999999999
     default=16
     [install.status_heartbeat_interval]
     ask.en="status-heartbeat-interval"
     type="number"
+    min=0
+    max=99999999999999
     default=0
     [install.sync_chunk_writes]
     ask.en="Synchronize chunk writes:"
@@ -324,6 +358,8 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.text_filtering_version]
     ask.en="Text filtering version:"
     type="number"
+    min=0
+    max=999999999999999
     default=0
     [install.use_native_transport]
     ask.en="use-native-transport"
@@ -332,6 +368,8 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.view_distance]
     ask.en="View distance:"
     type="number"
+    min=0
+    max=9999999999999
     default=10
     [install.white_list]
     ask.en="Use a whitelist ?"
