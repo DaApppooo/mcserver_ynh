@@ -51,6 +51,8 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en = "How much ram (in megabytes) do you want to allocate (at most) for this server:"
     type = "number"
     default = 1024
+    min = 0
+    max = 99999999999999
 
     [install.accepts_transfers]
     ask.en="Does your server accepts transfers ?"
@@ -122,7 +124,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.function_permission_level]
     ask.en="Function permission level:"
     type='number'
-    default='2'
+    default=2
     [install.gamemode]
     ask.en="Gamemode:"
     type="select"
