@@ -52,26 +52,26 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     type = "number"
     default = 1024
 
-    [install.accepts-transfers]
+    [install.accepts_transfers]
     ask.en="Does your server accepts transfers ?"
     type='boolean'
     default=false
 
-    [install.allow-flight]
+    [install.allow_flight]
     ask.en="Does your server allows flight ?"
     type='boolean'
     default=false
 
 
-    [install.broadcast-console-to-ops]
+    [install.broadcast_console_to_ops]
     ask.en="Broadcast console to ops ?"
     type='boolean'
     default=true
-    [install.broadcast-rcon-to-ops]
+    [install.broadcast_rcon_to_ops]
     ask.en="Broadcast rcon to ops ?"
     type='boolean'
     default=true
-    [install.bug-report-link]
+    [install.bug_report_link]
     ask.en="Link to report bugs to (empty to ignore):"
     type="string"
     default=''
@@ -80,45 +80,45 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     type="select"
     choices = [ "peaceful", "easy", "normal", "hard" ]
     default = "easy"
-    [install.enable-code-of-conduct]
+    [install.enable_code_of_conduct]
     ask.en="Enable code of conduct ?"
     type='boolean'
     default=false
-    [install.enable-jmx-monitoring]
+    [install.enable_jmx_monitoring]
     ask.en="Enable jmx monitoring ?"
     type='boolean'
     default=false
-    [install.enable-query]
+    [install.enable_query]
     ask.en="Enable query ?"
     type='boolean'
     default=false
-    [install.enable-rcon]
+    [install.enable_rcon]
     ask.en="Enable rcon ? (web interface won't work if not enabled)"
     type='boolean'
     default=true
-    [install.enable-status]
+    [install.enable_status]
     ask.en="Enable status ?"
     type='boolean'
     default=true
-    [install.enforce-secure-profile]
+    [install.enforce_secure_profile]
     ask.en="Enforce secure profile:"
     type='boolean'
     default=true
-    [install.enforce-whitelist]
+    [install.enforce_whitelist]
     ask.en="Whitelist only ?"
     type='boolean'
     default=false
-    [install.entity-broadcast-range-percentage]
+    [install.entity_broadcast_range_percentage]
     ask.en="Entity broadcast range percentage:"
     type='range'
     default='100'
     min = "0"
     max = "100"
-    [install.force-gamemode]
+    [install.force_gamemode]
     ask.en="Force gamemode ?"
     type='boolean'
     default=false
-    [install.function-permission-level]
+    [install.function_permission_level]
     ask.en="Function permission level:"
     type='number'
     default='2'
@@ -127,87 +127,87 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     type="select"
     choices = [ "creative", "survival", "spectator" ]
     default='survival'
-    [install.generate-structures]
+    [install.generate_structures]
     ask.en="Generate structures ?"
     type='boolean'
     default=true
-    [install.generator-settings]
+    [install.generator_settings]
     ask.en="Generator settings:"
     type="string"
     default='{}'
     [install.hardcore]
-    ask.en="Activate hardcore"
+    ask.en="Activate hardcore ?"
     type='boolean'
     default=false
-    [install.hide-online-players]
+    [install.hide_online_players]
     ask.en="Hide online players ?"
     type='boolean'
     default=false
-    [install.initial-disabled-packs]
+    [install.initial_disabled_packs]
     ask.en="Initial disabled packs:"
     type="string"
     default=''
-    [install.initial-enabled-packs]
+    [install.initial_enabled_packs]
     ask.en="Initial enabled packs:"
     type="string"
     default='vanilla'
-    [install.level-name]
+    [install.level_name]
     ask.en="Name:"
     type="string"
     default='world'
-    [install.level-seed]
+    [install.level_seed]
     ask.en="Seed:"
     type="string"
     default=''
-    [install.level-type]
+    [install.level_type]
     ask.en="Type:"
     type="string"
     default='minecraft\\:normal'
-    [install.log-ips]
+    [install.log_ips]
     ask.en="Log ips ?"
     type='boolean'
     default=true
-    [install.management-server-allowed-origins]
+    [install.management_server_allowed_origins]
     ask.en="management-server-allowed-origins"
     type="string"
     default=''
-    [install.management-server-enabled]
+    [install.management_server_enabled]
     ask.en="management-server-enabled"
     type='boolean'
     default=false
-    [install.management-server-host]
+    [install.management_server_host]
     ask.en="management-server-host"
     type="string"
     default='localhost'
-    [install.management-server-port]
+    [install.management_server_port]
     ask.en="management-server-port"
     type=number
     default='0'
-    [install.management-server-tls-enabled]
+    [install.management_server_tls_enabled]
     ask.en="management-server-tls-enabled"
     type='boolean'
     default=true
-    [install.management-server-tls-keystore]
+    [install.management_server_tls_keystore]
     ask.en="management-server-tls-keystore"
     type="string"
     default=''
-    [install.management-server-tls-keystore-password]
+    [install.management_server_tls_keystore_password]
     ask.en="management-server-tls-keystore-password"
     type="string"
     default=''
-    [install.max-chained-neighbor-updates]
+    [install.max_chained_neighbor_updates]
     ask.en="Maximum number of chained neighbor updates:"
     type="number"
     default='1000000'
-    [install.max-players]
+    [install.max_players]
     ask.en="Maximum number of players:"
     type="number"
     default='20'
-    [install.max-tick-time]
+    [install.max_tick_time]
     ask.en="Maximum tick time:"
     type="number"
     default='60000'
-    [install.max-world-size]
+    [install.max_world_size]
     ask.en="Maximum world size:"
     type=number
     default='29999984'
@@ -215,111 +215,111 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="Server title:"
     type="string"
     default='A Minecraft Server'
-    [install.network-compression-threshold]
+    [install.network_compression_threshold]
     ask.en="Network compression threshold"
     type="number"
     default=256
-    [install.online-mode]
+    [install.online_mode]
     ask.en="online-mode"
     type='boolean'
     default=true
-    [install.op-permission-level]
+    [install.op_permission_level]
     ask.en="Permission level for operators:"
     type="number"
     default='4'
-    [install.pause-when-empty-seconds]
+    [install.pause_when_empty_seconds]
     ask.en="Pause when empty after x seconds:"
     type="number"
     default=60
-    [install.player-idle-timeout]
+    [install.player_idle_timeout]
     ask.en="Kick idle players after x seconds (0 for never):"
     type="number"
     default=0
-    [install.prevent-proxy-connections]
+    [install.prevent_proxy_connections]
     ask.en="Prevent proxy connections"
     type='boolean'
     default=false
-    [install.query-port]
+    [install.query_port]
     ask.en="Query port (if query is enabled):"
     type="number"
     default=25565
-    [install.rate-limit]
+    [install.rate_limit]
     ask.en="Rate limit (0 for no limit):"
     type="number"
     default=0
-    [install.rcon-password]
+    [install.rcon_password]
     ask.en="Rcon password (if rcon is enabled):"
     type="string"
     default=''
-    [install.rcon-port]
+    [install.rcon_port]
     ask.en="Rcon port (if rcon is enabled, and DO NOT EXPOSE THIS PORT):"
     type="number"
     default=25575
-    [install.region-file-compression]
+    [install.region_file_compression]
     ask.en="Region file compressions:"
     type="string"
     default='deflate'
-    [install.require-resource-pack]
+    [install.require_resource_pack]
     ask.en="Require ressource pack:"
     type='boolean'
     default=false
-    [install.resource-pack]
+    [install.resource_pack]
     ask.en="Ressource pack:"
     type="string"
     default=''
-    [install.resource-pack-id]
+    [install.resource_pack_id]
     ask.en="Ressource pack id:"
     type="string"
     default=''
-    [install.resource-pack-prompt]
+    [install.resource_pack_prompt]
     ask.en="ressource-pack-prompt"
     type="string"
     default=''
-    [install.resource-pack-sha1]
+    [install.resource_pack_sha1]
     ask.en="Sha1 hash of the ressource pack:"
     type="string"
     default=''
-    [install.server-ip]
+    [install.server_ip]
     ask.en="Server ip:"
     type="string"
     default='0.0.0.0'
-    [install.server-port]
+    [install.server_port]
     ask.en="Server port (you need to open the ports on this server yourself):"
     type="number"
     default=25565
-    [install.simulation-distance]
+    [install.simulation_distance]
     ask.en="Simulation distance:"
     type="number"
     default=10
-    [install.spawn-protection]
+    [install.spawn_protection]
     ask.en="Spawn protection radius:"
     type="number"
     default=16
-    [install.status-heartbeat-interval]
+    [install.status_heartbeat_interval]
     ask.en="status-heartbeat-interval"
     type="number"
     default=0
-    [install.sync-chunk-writes]
+    [install.sync_chunk_writes]
     ask.en="Synchronize chunk writes:"
     type='boolean'
     default=true
-    [install.text-filtering-config]
+    [install.text_filtering_config]
     ask.en="Text filtering configuration:"
     type="string"
     default=''
-    [install.text-filtering-version]
+    [install.text_filtering_version]
     ask.en="Text filtering version:"
     type="number"
     default=0
-    [install.use-native-transport]
+    [install.use_native_transport]
     ask.en="use-native-transport"
     type='boolean'
     default=true
-    [install.view-distance]
+    [install.view_distance]
     ask.en="View distance:"
     type="number"
     default=10
-    [install.white-list]
+    [install.white_list]
     ask.en="Use a whitelist ?"
     type='boolean'
     default=false
