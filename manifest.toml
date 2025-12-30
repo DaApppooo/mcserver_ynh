@@ -75,6 +75,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="Link to report bugs to (empty to ignore):"
     type="string"
     default=''
+    optional=true
     [install.difficulty]
     ask.en="Difficulty"
     type="select"
@@ -147,6 +148,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="Initial disabled packs:"
     type="string"
     default=''
+    optional=true
     [install.initial_enabled_packs]
     ask.en="Initial enabled packs:"
     type="string"
@@ -159,6 +161,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="Seed:"
     type="string"
     default=''
+    optional=true
     [install.level_type]
     ask.en="Type:"
     type="string"
@@ -171,6 +174,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="management-server-allowed-origins"
     type="string"
     default=''
+    optional=true
     [install.management_server_enabled]
     ask.en="management-server-enabled"
     type='boolean'
@@ -191,9 +195,11 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     ask.en="management-server-tls-keystore"
     type="string"
     default=''
+    optional=true
     [install.management_server_tls_keystore_password]
     ask.en="management-server-tls-keystore-password"
     type="string"
+    optional=true
     default=''
     [install.max_chained_neighbor_updates]
     ask.en="Maximum number of chained neighbor updates:"
@@ -250,6 +256,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.rcon_password]
     ask.en="Rcon password (if rcon is enabled):"
     type="string"
+    optional=true
     default=''
     [install.rcon_port]
     ask.en="Rcon port (if rcon is enabled, and DO NOT EXPOSE THIS PORT):"
@@ -266,18 +273,22 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.resource_pack]
     ask.en="Ressource pack:"
     type="string"
+    optional=true
     default=''
     [install.resource_pack_id]
     ask.en="Ressource pack id:"
     type="string"
+    optional=true
     default=''
     [install.resource_pack_prompt]
     ask.en="ressource-pack-prompt"
     type="string"
+    optional=true
     default=''
     [install.resource_pack_sha1]
     ask.en="Sha1 hash of the ressource pack:"
     type="string"
+    optional=true
     default=''
     [install.server_ip]
     ask.en="Server ip:"
@@ -306,6 +317,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     [install.text_filtering_config]
     ask.en="Text filtering configuration:"
     type="string"
+    optional=true
     default=''
     [install.text_filtering_version]
     ask.en="Text filtering version:"
@@ -339,7 +351,7 @@ paid-content.en = "Depends, for users, entirely on a paid service (minecraft)."
     subdirs = [".mcserver/worlds"]
 
     [resources.permissions]
-    main.allowed = "admin"
+    main.allowed = "admins"
 
     [resources.apt]
     packages = ["default-jre"]
