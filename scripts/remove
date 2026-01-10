@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ynh_script_progression --message="Removing systemd service..."
+ynh_config_add_systemd
+
