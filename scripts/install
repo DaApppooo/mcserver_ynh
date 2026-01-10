@@ -13,7 +13,7 @@ source /usr/share/yunohost/helpers
 ynh_script_progression --message="Setting up source files..." 
 ynh_setup_source --dest_dir="$install_dir"
 
-ynh_script_progression --message=$(ls -a $install_dir)
+ynh_script_progression --message=$(ls -a $install_dir | tr '\n' ' ||| ')
 sleep 30
 
 ynh_script_progression --message="Starting server for the first time to accept the eula and setup the server configuration..."
