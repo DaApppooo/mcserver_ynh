@@ -17,6 +17,7 @@ ynh_script_progression --message=$(ls -a $install_dir | tr '\n' ' ||| ')
 sleep 30
 
 ynh_script_progression --message="Starting server for the first time to accept the eula and setup the server configuration..."
+ynh_script_progression --message=$(ls -a | tr '\n' ' ||| ')
 java -Xmx${memory}M -Xms${memory}M -jar ${install_dir}/server.jar nogui
 echo 'eula=${eula}' >${install_dir}/eula.txt
 ynh_config_add --jinja --template="server.properties" --destination="${install_dir}"
